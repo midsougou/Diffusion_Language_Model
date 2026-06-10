@@ -54,7 +54,7 @@ We go over the main ingredients for training dLLMs :
   *   In addition to the input embeddings and the positional embedding, we also add a learnable **time-step embedding** as well which encodes the noise level given the diffusion timestep $t$.
   *   We replace the Causal Attention mask by a bi-directional attention one to use tokens before and after the masked when computing the attention scores of the sequence.
 
-
+> ![train_loss](loss.png)
 ####  Inference Phase
 
 
@@ -72,3 +72,35 @@ Various strategies can be used to predict tokens at each step, like [MaskGIT](ht
 
 We train our dLLM on [TinyStories dataset](https://huggingface.co/datasets/roneneldan/TinyStories) which consists of a number of synthetic small stories that a typical 3-year-old child would understand, which is in general a very **restricted and small** vocabulary. We also train a tokenizer from scratch from this dataset before training the model itself
 
+--- 
+
+## Model Configuration
+
+The model has ~13 million parameters with the following configuration on a A100 SXM for ~3hours available at [RunPod](https://www.runpod.io/)
+
+```python
+cfg = {
+    "vocab_size": 8000,
+    "context_length": 256,
+    "emb_dim": 384,
+    "n_layers": 6,
+    "n_heads": 6,
+    "d_ff": 1536, # 4*emb_dim
+    "dropout": 0.1,
+    "diffusion_steps": 64
+}
+```
+We also trained a bigger model with ~45M params with this configuration
+
+```python
+cfg = {
+    "vocab_size": 26_000,
+    "context_length": 256,
+    "emb_dim": 512,
+    "n_layers": 10,
+    "n_heads": 8,
+    "d_ff": 2048, # 4*emb_dim
+    "dropout": 0.1,
+    "diffusion_steps": 128
+}
+```
