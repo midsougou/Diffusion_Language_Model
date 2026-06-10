@@ -1,5 +1,4 @@
-
-## Introduction
+## Diffusion Language Model
 
 - Classical Large Language Models (LLMs) are a class of models aiming to learn the distribution of text $p_{data}$, and predominantly, they rely during training on the autoregressive modeling paradigm (ARM), meaning that they are pre-trained on a simple next-token prediction task. Once trained, and given an input text or prompt, they simply predict the next most likely token, then append it to the input text to run again the same prediction step, and they repeat this process until the complete model response is completed.
 
