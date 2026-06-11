@@ -12,7 +12,7 @@
 
 ## Inference Visualization
 
-A minimal animation shows the final diffusion language model generating an output response based on user input query.
+A minimal animation shows the final diffusion language model generating an output response based on user input query. We also show next to it using the same output sequence the number of iterations needed to decode it using an antoregressive language model.
 
 ![Diffusion Inference](diffusion_autoregressive_anim.gif)
 
@@ -76,7 +76,7 @@ We train our dLLM on [TinyStories dataset](https://huggingface.co/datasets/ronen
 
 ## Model Configuration
 
-The model has ~13 million parameters with the following configuration on a A100 SXM for ~3hours available at [RunPod](https://www.runpod.io/)
+The model has ~13 million parameters with the following configuration on a A100 SXM at [RunPod](https://www.runpod.io/)
 
 ```python
 cfg = {
@@ -108,3 +108,8 @@ cfg = {
 ## Next Steps
 
 We have covered here mainly the pre-training part related to LLM training. The other steps related to Instruction Tuning, Post-Training, as well as Finetuning diffusion language models could you be further explored in future work.
+
+## References 
+
+- Tutorial on building small diffusion language model [here](https://github.com/jaydeepraijada/Diffusion)
+- Large Diffusion Language Model Arxiv [paper](https://arxiv.org/abs/2502.09992)
