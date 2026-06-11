@@ -14,7 +14,7 @@
 
 A minimal animation shows the final diffusion language model generating an output response based on user input query.
 
-![Diffusion Inference](dllm_inference.gif)
+![Diffusion Inference](diffusion_autoregressive_anim.gif)
 
 ## Repository Structure
 
@@ -90,7 +90,7 @@ cfg = {
     "diffusion_steps": 64
 }
 ```
-We also trained a bigger model with ~45M params with this configuration
+We also trained a bigger model with ~45M params with this configuration using [Lightning AI](https://lightning.ai/) on a RTXP 6000 for 1hour and 30min
 
 ```python
 cfg = {
@@ -104,3 +104,7 @@ cfg = {
     "diffusion_steps": 128
 }
 ```
+
+## Next Steps
+
+We have covered here mainly the pre-training part related to LLM training. The other steps related to Instruction Tuning, Post-Training, as well as Finetuning diffusion language models could you be further explored in future work.
