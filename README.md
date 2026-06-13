@@ -109,7 +109,8 @@ cfg = {
 
 We have covered here mainly the pre-training part related to LLM training. The other steps related to Instruction Tuning, Post-Training, as well as Finetuning diffusion language models could you be further explored in future work.
 
-## References 
+## Resources & References
 
-- Tutorial on building small diffusion language model [here](https://github.com/jaydeepraijada/Diffusion)
+- Tutorial on building small diffusion language model [here](https://www.youtube.com/playlist?list=PLPTV0NXA_ZShhDDPgy1ygii42nwOngUaf)
+- Github Repo inspired by the tutorial [here](https://github.com/jaydeepraijada/Diffusion)
 - Large Diffusion Language Model Arxiv [paper](https://arxiv.org/abs/2502.09992)
