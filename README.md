@@ -29,6 +29,8 @@ The primary files in this codebase are :
 
 Additionally, a folder ```notebooks/``` contains some notebooks to gain a hands-on understanding of the different steps.
 
+Finally, a link to the final trained model's weights used for the vizualization is available [here on HF](https://huggingface.co/huggingaccount-m/diffusion_language_model) 
+
 ## Overview of Diffusion Language Models
 - A diffusion Large Language Model (dLLM) produces an output response by iteratively **denoising the whole sequence**, where it simulates a reverse diffusion process from a fully masked sequence in the following :
 
